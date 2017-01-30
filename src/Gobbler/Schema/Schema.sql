@@ -1,0 +1,19 @@
+﻿CREATE TABLE `payments` (
+	`Id` INT(11) NOT NULL AUTO_INCREMENT,
+	`SteamId` VARCHAR(50) NOT NULL,
+	`ProductId` SMALLINT(6) NOT NULL,
+	`Quantity` TINYINT(3) UNSIGNED NOT NULL DEFAULT '1',
+	`PayerName` VARCHAR(200) NOT NULL,
+	`TransactionId` VARCHAR(30) NOT NULL,
+	`GrossAmount` DECIMAL(10,2) NOT NULL,
+	`FeeAmount` DECIMAL(10,2) NOT NULL,
+	`Currency` SMALLINT(6) NOT NULL,
+	`PayedAt` DATETIME NOT NULL,
+	`CreatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`AppliedAt` DATETIME NULL DEFAULT NULL,
+	PRIMARY KEY (`Id`),
+	UNIQUE INDEX `TransactionId` (`TransactionId`),
+	INDEX `SteamId` (`SteamId`)
+)
+COLLATE='utf8_unicode_ci'
+ENGINE=InnoDB;

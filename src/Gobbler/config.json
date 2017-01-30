@@ -1,0 +1,20 @@
+﻿{
+  "mySql": {
+    "connectionString": "server=localhost;database=test_db;uid=root;password=caca;charset=utf8;pooling=true;minimumpoolSize=2;maximumpoolsize=5;allow user variables=true"
+  },
+  "payPal": {
+    "mode": "sandbox",
+    "username": "test_username_here",
+    "password": "test_password_here",
+    "signature": "your_signature_here"
+  },
+  "gmail": {
+    "host": "imap.googlemail.com",
+    "port": 993,
+    "username": "test_email_here",
+    "password": "test_password_here"
+  },
+  "transactionParser": {
+    "filterCodes": [ "PP1304", "PP341", "PP342" ]
+  }
+}
